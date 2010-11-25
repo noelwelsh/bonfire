@@ -3,8 +3,9 @@
 (require racket/class
          racket/match
          racket/gui/base
-         "point.ss"
-         (except-in "frame.ss"
+         "base.rkt"
+         "point.rkt"
+         (except-in "frame.rkt"
                     Mark Dot Circle Box Line Frame Overlay Panel
                     Colour Style))
 
@@ -90,14 +91,20 @@
   
   (match mk
    [(struct Dot ())
-    (send dc draw-rectangle (- x 0.0625) (- y 0.0625) 0.125 0.125)]
+    ;(send dc draw-rectangle (- x 0.0625) (- y 0.0625) 0.125 0.125)
+    (log-bonfire (format "drawing Dot at ~a ~a" x y))
+    (send dc draw-point x y)]
    [(struct Circle (r))
+    (log-bonfire (format "drawing Circle at ~a ~a, radius ~a" x y r))
     (send dc draw-ellipse (- x r) (- y r) (* 2 r) (* 2 r))]
    [(struct Box (w h))
     (define w/2 (/ w 2))
     (define h/2 (/ h 2))
+    (log-bonfire (format "drawing Box at ~a ~a, width ~a height ~a" x y w h))
     (send dc draw-rectangle (- x w/2) (- y h/2) w h)]
    [(struct Line (s-x s-y e-x e-y))
+    (log-bonfire
+     (format "drawing Line at ~a ~a, start at ~a ~a, end at ~a ~a" x y s-x s-y e-x e-y))
     (send dc draw-line (+ x s-x) (+ y s-y) (+ x e-x) (+ y e-y))]))
 
 

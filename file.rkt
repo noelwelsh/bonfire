@@ -1,9 +1,9 @@
 #lang racket/gui
 
 (require
- "mark.ss"
- "plot.ss"
- (except-in "frame.ss" Frame))
+ "mark.rkt"
+ "plot.rkt"
+ (except-in "frame.rkt" Frame))
 
 (define (plot-file file-name frame)
   (define setup (new ps-setup%))

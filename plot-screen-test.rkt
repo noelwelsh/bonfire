@@ -4,7 +4,7 @@
 ;;
 ;; Run these tests from MrEd
 
-(require "main.ss")
+(require "main.rkt")
 
 
 ;; Four circles arranged in a square. This tests mark

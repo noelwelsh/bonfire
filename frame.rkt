@@ -2,9 +2,9 @@
 
 (require
  racket/match
- "point.ss"
- "mark.ss"
- "style.ss")
+ "point.rkt"
+ "mark.rkt"
+ "style.rkt")
 
 ;; A Frame is a container for a Mark
 ;;
@@ -246,8 +246,8 @@
  (struct-out Panel)
  (struct-out Overlay)
 
- (all-from-out "mark.ss")
- (all-from-out "style.ss")
+ (all-from-out "mark.rkt")
+ (all-from-out "style.rkt")
  
  frame
  dot

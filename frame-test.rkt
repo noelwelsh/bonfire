@@ -1,8 +1,8 @@
 #lang racket/base
 
 (require (planet schematics/schemeunit:3/test))
-(require "mark.ss"
-         "frame.ss")
+(require "mark.rkt"
+         "frame.rkt")
 
 (define/provide-test-suite frame-tests
   (test-case

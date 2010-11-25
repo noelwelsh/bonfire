@@ -1,5 +1,5 @@
 ;;;
-;;; Time-stamp: <2010-11-24 14:15:02 noel>
+;;; Time-stamp: <2010-11-24 14:31:47 noel>
 ;;;
 ;;; Copyright (C) by Noel Welsh. 
 ;;;
@@ -28,7 +28,7 @@
 #lang racket/base
 
 (require (planet schematics/schemeunit:3/test)
-         "frame-test.ss")
+         "frame-test.rkt")
 
 (define/provide-test-suite all-tests
   frame-tests

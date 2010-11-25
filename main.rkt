@@ -1,11 +1,11 @@
 #lang racket/base
 
 (require
- "point.ss"
- "frame.ss"
- "screen.ss")
+ "point.rkt"
+ "frame.rkt"
+ "screen.rkt")
 
 (provide
- (all-from-out "point.ss"
-               "frame.ss"
+ (all-from-out "point.rkt"
+               "frame.rkt"
                "screen.ss"))

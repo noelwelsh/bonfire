@@ -1,6 +1,6 @@
 #lang racket/base
 
-(require "sequence.ss")
+(require "sequence.rkt")
 
 (define (make-point x y) (vector x y))
 (define (point-x p) (vector-ref p 0))

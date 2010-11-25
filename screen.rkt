@@ -1,9 +1,9 @@
 #lang racket/gui
 
 (require
- "mark.ss"
- "plot.ss"
- (except-in "frame.ss" Frame))
+ "mark.rkt"
+ "plot.rkt"
+ (except-in "frame.rkt" Frame))
 
 (define default-width 300)
 (define default-height 300)
