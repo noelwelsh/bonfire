@@ -8,4 +8,4 @@
 (provide
  (all-from-out "point.rkt"
                "frame.rkt"
-               "screen.ss"))
+               "screen.rkt"))
